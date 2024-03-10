@@ -64,5 +64,6 @@ endmodule
 ![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/88739516-ac69-4d18-b871-91130468cac3)
 
 **Result:**
+
 Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
 

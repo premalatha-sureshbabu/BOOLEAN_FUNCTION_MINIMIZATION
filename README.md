@@ -38,33 +38,31 @@ Program to implement the given logic function and to verify its operations in qu
 Developed by: S.Prema Latha
 RegisterNumber:212222230112
 ```
-module boolean_fun(a,b,c,d,w,x,y,z,f1,f2);
-input a,b,c,d,w,x,y,z;
-output f1,f2;
-wire adash,bdash,cdash,ddash,ydash,p,q,r,s,t,u,v,w1,w2,x1,x2,y1,y2,z1,z2;
-not(adash,a);
-not(bdash,b);
-not(cdash,c);
-not(ddash,d);
-not(ydash,y);
-and(p,bdash,ddash);
-and(q,adash,b,d);
-and(r,a,b,cdash);
-or(f1,p,q,r);
-
-and(w1,a,b,c);
-and(w2,~a,~b,~c);
-or(f2,w1,w2);
+module exp22(A,B,C,D,F1);
+input A,B,C,D;
+output F1;
+wire x1,x2,x3,x4,x5;
+assign x1=(~A)&(~B)&(~C)&(~D);
+assign x2=(A)&(~C)&(~D);
+assign x3=(~B)&(C)&(~D);
+assign x4=(~A)&(B)&(C)&(D);
+assign x5=(B)&(~C)&(D);
+assign F1=x1|x2|x3|x4|x5;
 endmodule
+
 ```
 
 **RTL realization**
 
-![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/d9caeef3-7cf1-4829-9a43-ef11c0b114b4)
+![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/18e26de1-dd14-4e34-b53b-182044799816)
 
+**Truth Table**
 
-![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/ad77cb23-80b4-4d53-9d96-63e9fcd280d9)
+![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/a903ec9e-14cc-4fef-8203-65a27c73363a)
 
+**Timing Diagram**
+
+![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/d164c2e5-0745-4078-8d18-8ea7feb94647)
 
 **Result:**
 

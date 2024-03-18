@@ -38,30 +38,33 @@ Program to implement the given logic function and to verify its operations in qu
 Developed by: S.Prema Latha
 RegisterNumber:212222230112
 ```
-module combinationalcircuit(A,B,C,D,F1);
-input A,B,C,D;
-output F1;
-wire x1,x2,x3,x4,x5;
-assign x1=(~A)&(~B)&(~C)&(~D);
-assign x2=(A)&(~C)&(~D);
-assign x3=(~B)&(C)&(~D);
-assign x4=(~A)&(B)&(C)&(D);
-assign x5=(B)&(~C)&(D);
-assign F1=x1|x2|x3|x4|x5;
+module boolean_fun(a,b,c,d,w,x,y,z,f1,f2);
+input a,b,c,d,w,x,y,z;
+output f1,f2;
+wire adash,bdash,cdash,ddash,ydash,p,q,r,s,t,u,v,w1,w2,x1,x2,y1,y2,z1,z2;
+not(adash,a);
+not(bdash,b);
+not(cdash,c);
+not(ddash,d);
+not(ydash,y);
+and(p,bdash,ddash);
+and(q,adash,b,d);
+and(r,a,b,cdash);
+or(f1,p,q,r);
+
+and(w1,a,b,c);
+and(w2,~a,~b,~c);
+or(f2,w1,w2);
 endmodule
 ```
 
 **RTL realization**
 
-![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/7042ceff-df5a-4500-9d76-006139e9ff7c)
+![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/d9caeef3-7cf1-4829-9a43-ef11c0b114b4)
 
-**Timetable**
 
-![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/1b66aa71-f32f-4b71-9854-de05a4113a5b)
+![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/ad77cb23-80b4-4d53-9d96-63e9fcd280d9)
 
-**Timing Diagram**
-
-![image](https://github.com/premalatha-sureshbabu/BOOLEAN_FUNCTION_MINIMIZATION/assets/120620842/88739516-ac69-4d18-b871-91130468cac3)
 
 **Result:**
 
